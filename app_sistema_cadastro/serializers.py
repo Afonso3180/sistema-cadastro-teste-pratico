@@ -8,9 +8,9 @@ class SupplierSerializer(serializers.ModelSerializer):
 
 class PriceHistorySerializer(serializers.ModelSerializer):
     class Meta:
-        model: PriceHistory
+        model = PriceHistory
         fields = ['id', 'product', 'price', 'date']
-
+    
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
@@ -23,4 +23,4 @@ class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = ['id', 'name', 'description', 'price', 'sku' 'suppliers', 'price_hispytory', 'reviews']
+        fields = ['id', 'name', 'description', 'price', 'sku', 'suppliers', 'price_history', 'reviews']
